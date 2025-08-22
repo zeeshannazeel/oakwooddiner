@@ -1,0 +1,138 @@
+:root {
+    /*COLORS*/
+    --green: #2E4D3E;
+    --brown: #A75F4B;
+    --cream: #E2C9A1;
+    --black: #17211f;
+}
+
+.title {
+    font-size: 1.6rem;
+    text-shadow: 0px 0px 2px black;
+    width: 80%;
+}
+
+/*HEADER*/
+
+header {
+    margin-top: calc(80px + 1em);
+}
+
+#menu-header-title {
+    margin: 10% auto 0.5em;
+    width: 70%;
+    font-size: clamp(1.6rem, 4vw, 3.5rem);
+}
+
+.header-images {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-images img {
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+#header-img1, #header-img3, #header-img5, #header-img7, #header-img9 {
+    border: 2px solid var(--green);
+    width: clamp(5rem, 13vw, 12rem);
+    height: clamp(1rem, 13vh, 20rem);
+}
+
+#header-img2, #header-img4, #header-img6, #header-img8, #header-img10 {
+    border: 2px solid var(--brown);
+    width: clamp(4rem, 8vw, 13rem);
+    height: clamp(1rem, 9vh, 13rem);
+}
+
+
+
+/*MENU*/
+.menu-container {
+    margin-bottom: 6em;
+}
+
+.menu-item-title {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    margin: 1em auto 0.5em;
+}
+
+.menu-button {
+    border-radius: 5%;
+    font-size: clamp(0.6rem, 1.3vw, 1rem);
+    padding: clamp(0.8rem, 3vw, 1.2rem) clamp(1.4rem, 5vw, 2.2rem);
+    display: block;
+    margin: 0 auto;
+}
+.menu-button:hover {
+    padding: clamp(0.8rem, 3vw, 1.2rem) clamp(1.2rem, 5vw, 1.9rem);
+}
+
+.menu-item-container {
+    margin: 0 auto;
+}
+
+.menu-grid {
+    background: radial-gradient(var(--green) 30%, var(--black) 70%);
+    width: 90%;
+    max-width: 1000px;
+    padding: 1em;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em 1.5em;
+}
+
+.menu-grid-item {
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+    border-bottom: 0.1em solid var(--brown);
+    border-right: 0.3em double var(--brown);
+}
+
+.menu-grid-item p {
+    color: var(--cream);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menu-grid-name {
+    font-size: clamp(0.6rem, 2.5vw, 1.4rem);
+}
+
+.menu-grid-price {
+    margin-left: auto;
+    padding: 0 2px;
+    font-size: clamp(0.6rem, 2.5vw, 1.8rem);
+}
+
+.menu-grid-img {
+    width: 30%;
+    display: inline;
+    margin-right: 0.4em;
+    border-radius: 10%;
+}
+
+.menu-note {
+    font-size: clamp(0.6rem, 2vw, 0.9rem);
+    opacity: 70%;
+    color: var(--brown);
+    display: block;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.menu-divider {
+    margin: 2.5em auto;
+    width: 70%;
+}

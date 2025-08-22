@@ -1,0 +1,96 @@
+:root {
+    /*COLORS*/
+    --green: #2E4D3E;
+    --brown: #A75F4B;
+    --cream: #E2C9A1;
+    --black: #17211f;
+}
+
+label {
+    font-size: clamp(0.7rem, 3vw, 1.5rem);
+    color: var(--cream);
+}
+
+.asterisk {
+    font-size: clamp(0.7rem, 3vw, 1.5rem);
+    color: white;
+    position: relative;
+    top: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid input {
+    width: 90%;
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+}
+
+.input-style {
+    border: 1px solid var(--brown);
+    border-radius: 5%;
+    background-color: transparent;
+    color: var(--cream);
+    padding: 0.5em 0.3em;
+    width: 45%;
+}
+
+input[type="date"]::placeholder, input [type="time"]::placeholder {
+    color: var(--cream);
+    opacity: 1;
+}
+
+.main-content {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(images/background-images/reservation-background-image.png);
+    background-size: cover;
+}
+
+#reservation-form {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+    margin: calc(80px + 6em) auto 6em;
+    padding: 1.5em;
+}
+
+#reservation-header {
+    font-size: clamp(1.7rem, 4vw, 2.8rem);
+    margin-bottom: 1em;
+}
+
+#reservation-form input[type="text"] {
+    font-weight: bold;
+}
+
+#reservation-form input::placeholder, #notes-textarea::placeholder {
+    font-weight: normal;
+    opacity: 70%;
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+} 
+
+.reservation-container {
+    width: 100%;
+    margin: 0 auto 1em;
+}
+
+#occasion-input {
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+}
+
+#notes-label, #notes-textarea {
+    display: block;
+}
+
+#notes-textarea {
+    width: 100%;
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+}
+
+#reservation-form-submit {
+    display: block;
+    margin: 0 auto;
+    font-size: clamp(0.7rem, 2vw, 1.4rem);
+    padding: clamp(0.7rem, 2vw, 1.5rem) clamp(1rem, 3vw, 3rem);
+}
+#reservation-form-submit:hover {
+    padding: clamp(0.7rem, 2vw, 1.5rem) clamp(0.75rem, 2.5vw, 2.5rem);
+}

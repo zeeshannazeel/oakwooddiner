@@ -1,0 +1,223 @@
+:root {
+    /*COLORS*/
+    --green: #2E4D3E;
+    --brown: #A75F4B;
+    --cream: #E2C9A1;
+    --black: #17211f;
+}
+
+.contact-block {
+    background-color: var(--green);
+    width: 85%;
+    max-width: 800px;
+    padding: 3em;
+    margin: 1em auto;
+    border: 7px double var(--black);
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.contact-button {
+    display: block;
+    margin: 2em auto 1em;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    padding: clamp(0.6rem, 3vw, 1.2rem) clamp(1.4rem, 5vw, 2rem);
+}
+.contact-button:hover {
+    padding: clamp(0.6rem, 3vw, 1.2rem) clamp(1rem, 5vw, 1.6rem);
+}
+
+.contact-divider {
+    margin: 1em auto;
+    background: linear-gradient(to right, transparent, var(--brown), transparent);
+}
+
+
+
+/*GENERAL CONTACT*/
+.contact-title {
+    font-size: clamp(1.2rem, 7vw, 2.5rem);
+    margin: 0.5em auto 1em;
+}
+
+#general-info {
+    margin-top: calc(80px + 3em);
+}
+
+#general-info i {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    margin: 0 0.5em 0.8em 0;
+    color: var(--brown);
+}
+
+.general-info-text {
+    font-size: clamp(0.6rem, 3vw, 1rem);
+    color: var(--cream);
+    display: inline;
+}
+
+
+
+/*ADDITIONAL CONTACT*/
+#opening-hours p {
+    text-align: center;
+    color: var(--cream);
+    margin-bottom: 0.5em;
+    font-size: clamp(0.6rem, 3vw, 1.4rem);
+}
+
+.opening-hours-time {
+    font-weight: bold;
+}
+
+
+#gmaps-frame {
+    display: block;
+    margin: 0 auto 3em;
+    width: 85%;
+    height: 45vh;
+}
+
+
+
+/*SOCIAL MEDIA*/
+#contact-social-media-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#contact-social-media-icons a:hover > i {
+    transform: translateY(-6px);
+}
+
+#contact-social-media-icons a[href="https://www.instagram.com"]:hover > i {
+    background-image: linear-gradient(45deg, #feda77, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    background-clip: text;
+    color: transparent;
+}
+#contact-social-media-icons a[href="https://www.tiktok.com"]:hover > i {
+    color: black;
+    text-shadow:
+    -1.4px -1.4px 0 #25f4ee,
+    1.4px 1.4px 0 #fe2c55;
+}
+#contact-social-media-icons a[href="https://www.youtube.com"]:hover > i {
+    color: #ff3333;
+}
+#contact-social-media-icons a[href="https://www.facebook.com"]:hover > i {
+    color: #3B5998;
+}
+#contact-social-media-icons a[href="https://www.x.com"]:hover > i {
+    color: black;
+}
+
+.social-media-container {
+    text-align: center;
+}
+
+.social-media-container i {
+    color: var(--cream);
+    font-size: clamp(1.7rem, 7vw, 3rem);
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-media-name {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 0.5em 1em 2em; 
+    color: var(--black);
+}
+
+#social-media-title {
+    font-size: clamp(1.2rem, 7vw, 2.5rem);
+    margin: 0.8em 0 1.5em;
+}
+
+/*CONTACT FORM*/
+
+#contact-form {
+    margin: 3em auto 7em;
+}
+
+#form-title {
+    font-size: clamp(1.5rem, 8vw, 2.8rem);
+    margin-bottom: 1em;
+}
+
+#input-options, .contact-textarea {
+    width: 80%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+#input-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.1em 0.1em;
+}
+
+.contact-textarea {
+    border: 2px solid var(--green);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+#suggestion-textarea {
+    display: none;
+}
+#complaint-textarea {
+    display: none;
+}
+
+.form-input {
+    display: none;
+}
+
+.form-label {
+    color: var(--cream);
+    font-size: clamp(0.6rem, 3vw, 1.2rem);
+    text-align: center;
+    width: 100%;
+    padding: 0.8em 0;
+    background-color: var(--black);
+    border: 2px solid var(--green);
+}
+.form-label[for="feedback-input"], .form-label[for="suggestion-input"] {
+    border-right: 1px;
+}
+.form-label:hover {
+    cursor: pointer;
+    background-color: var(--green);
+    color: var(--cream);
+}
+
+.form-input:checked + .form-label {
+    background-color: var(--green);
+    color: var(--cream);
+    font-weight: bold;
+}
+
+#input-options:has(input[id="suggestion-input"]:checked) ~ .contact-textarea {
+    display: none;
+}
+#input-options:has(input[id="suggestion-input"]:checked) ~ #suggestion-textarea {
+    display: block;
+}
+
+#input-options:has(input[id="complaint-input"]:checked) ~ .contact-textarea {
+    display: none;
+}
+#input-options:has(input[id="complaint-input"]:checked) ~ #complaint-textarea {
+    display: block;
+}
+
+#form-submit {
+    font-size: clamp(0.5rem, 3vw, 1.5rem);  
+    padding: clamp(0.6rem, 3vw, 1.2rem) clamp(1.6rem, 5vw, 2rem);
+}
+#form-submit:hover {
+    padding: clamp(0.6rem, 3vw, 1.2rem) clamp(0.8rem, 5vw, 1.6rem);
+}
+
