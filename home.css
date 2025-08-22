@@ -13,7 +13,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background-images/hero-background-image.png);
     background-size: cover;
     height: 70vh;
-    padding: 7vw;
+    padding: 3em 0 0 2em;
     margin-top: 80px;
     scroll-margin-top: 80px;
 }

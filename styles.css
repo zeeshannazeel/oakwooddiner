@@ -110,7 +110,7 @@ b {
     align-items: center;
 
     width: 100%;
-    padding: 0 2em;
+    padding: 0 1em;
     height: 10vh;
     min-height: 100px;
     background-color: white;
@@ -223,15 +223,15 @@ b {
 
 #top-nav-reservation-button {
     font-size: clamp(1rem, 1.6vw, 1.4rem);
-    border: 2px solid var(--green);
+    border: 2px solid var(--black);
     padding: 0.5em 1em;
     border-radius: 20%;
     color: var(--cream);
-    background-color: var(--green);
+    background-color: var(--black);
 }
 #top-nav-reservation-button:hover {
     background-color: transparent;
-    color: var(--green);
+    color: var(--black);
     text-decoration: none;
 }
 
@@ -321,9 +321,6 @@ footer * {
 #footer-sect2 ul li {
     margin: auto;
 }
-#footer-sect2 ul li:hover {
-    text-decoration: underline;
-}
 
 .social-media-icons {
     display: flex;
@@ -352,6 +349,9 @@ footer * {
 
 /* md */
 @media (min-width: 768px) {
+    .main-content #hero-page {
+        padding: 5em;
+    }
     #nav-bar #toggle-menu-label {
         display: none;
     }

@@ -18,7 +18,6 @@
     width: 100%;
     margin: calc(80px + 2em) auto 2em;
     height: calc((150px + 3px) + (38px + 0.5em) + 14px);
-    overflow: hidden;
 }
 
 .timeline-div {
@@ -70,7 +69,7 @@
     border-bottom-left-radius: 10%;
 }
 
-#timeline:active > .timeline-div {
+#timeline:active > .timeline-div, #timeline:hover > .timeline-div {
     animation-play-state: paused;
 }
 
@@ -239,8 +238,8 @@
 }
 
 #mini-menu-button, #faq-button {
-    width: 45%;
-    max-width: 225px;
+    width: 40%;
+    max-width: 300px;
     display: block;
     margin: 3em auto;
     font-size: clamp(0.8rem, 2vw, 2rem);
